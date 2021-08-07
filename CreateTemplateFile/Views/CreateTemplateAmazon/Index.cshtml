@@ -1,0 +1,253 @@
+﻿
+@{
+    ViewBag.Title = "Create template Amazon";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model CreateTemplateFile.Models.InputData
+
+<div class="card">
+
+    @using (Html.BeginForm("Index", "CreateTemplateAmazon", FormMethod.Post, new  
+    {  
+        enctype = "multipart/form-data"  
+    }))
+    {
+        <div class="card-header">
+            <p class="card-title">Create Template Amazon</p>
+        </div>
+        <!--begin::Card body-->
+        <div class="card-body">
+            <div class="row">
+                <div class="col-6">
+                    <div>
+                        <div class="d-flex flex-column mb-5 fv-row fv-plugins-icon-container">
+
+                            <label class="required fs-5 fw-bold mb-2">Categories</label>
+
+                            <input type="file" class="form-control form-control-solid" name="category" />
+                            @*@Html.TextBoxFor(model => model.Categori, new { @class = "form-control form-control-solid" })*@
+
+                            <div class="fv-plugins-message-container invalid-feedback"></div>
+                        </div>
+
+                        <div class="d-flex flex-column mb-5 fv-row fv-plugins-icon-container">
+
+                            <label class="required fs-5 fw-bold mb-2">Feed product type</label>
+
+                            @Html.TextBoxFor(model => model.FeedProduct, new { @class = "form-control form-control-solid" })
+
+                            <div class="fv-plugins-message-container invalid-feedback"></div>
+                        </div>
+
+                        <div class="d-flex flex-column mb-5 fv-row fv-plugins-icon-container">
+
+                            <label class="required fs-5 fw-bold mb-2">Relationship Type</label>
+
+
+                            @Html.TextBoxFor(model => model.RelationshipType, new { @class = "form-control form-control-solid" })
+
+                            <div class="fv-plugins-message-container invalid-feedback"></div>
+                        </div>
+
+                        <div class="d-flex flex-column mb-5 fv-row fv-plugins-icon-container">
+
+                            <label class="required fs-5 fw-bold mb-2">Key Product Features 1</label>
+
+                            @Html.TextBoxFor(model => model.BulletPoint1, new { @class = "form-control form-control-solid" })
+
+                            <div class="fv-plugins-message-container invalid-feedback"></div>
+                        </div>
+
+                        <div class="d-flex flex-column mb-5 fv-row fv-plugins-icon-container">
+
+                            <label class="required fs-5 fw-bold mb-2">Key Product Features 3</label>
+
+                            @Html.TextBoxFor(model => model.BulletPoint3, new { @class = "form-control form-control-solid" })
+
+                            <div class="fv-plugins-message-container invalid-feedback"></div>
+                        </div>
+                        <div class="d-flex flex-column mb-5 fv-row fv-plugins-icon-container">
+
+                            <label class="required fs-5 fw-bold mb-2">Key Product Features 5</label>
+
+                            @Html.TextBoxFor(model => model.BulletPoint5, new { @class = "form-control form-control-solid" })
+
+                            <div class="fv-plugins-message-container invalid-feedback"></div>
+                        </div>
+                        <div class="d-flex flex-column mb-5 fv-row fv-plugins-icon-container">
+
+                            <label class="required fs-5 fw-bold mb-2">Search Terms</label>
+
+                            @Html.TextBoxFor(model => model.GenericKeywords, new { @class = "form-control form-control-solid" })
+
+                            <div class="fv-plugins-message-container invalid-feedback"></div>
+                        </div>
+                        @*<div class="d-flex flex-column mb-5 fv-row fv-plugins-icon-container">
+
+                            <label class="required fs-5 fw-bold mb-2">Your Price USD (US)</label>
+
+                            @Html.TextBoxFor(model => model.PurchasableOffer, new { @class = "form-control form-control-solid" })
+
+                            <div class="fv-plugins-message-container invalid-feedback"></div>
+                        </div>*@
+                        <div class="d-flex flex-column mb-5 fv-row fv-plugins-icon-container">
+
+                            <label class="required fs-5 fw-bold mb-2">Item Length Head to Toe 1</label>
+
+                            @Html.TextBoxFor(model => model.ItemLengthHead1, new { @class = "form-control form-control-solid" })
+
+                            <div class="fv-plugins-message-container invalid-feedback"></div>
+                        </div>
+                        <div class="d-flex flex-column mb-5 fv-row fv-plugins-icon-container">
+
+                            <label class="required fs-5 fw-bold mb-2">Item Length Head to Toe 2</label>
+
+                            @Html.TextBoxFor(model => model.ItemLengthHead2, new { @class = "form-control form-control-solid" })
+
+                            <div class="fv-plugins-message-container invalid-feedback"></div>
+                        </div>
+                        <div class="d-flex flex-column mb-5 fv-row fv-plugins-icon-container">
+
+                            <label class="required fs-5 fw-bold mb-2">Item Length Head to Toe 3</label>
+
+                            @Html.TextBoxFor(model => model.ItemLengthHead3, new { @class = "form-control form-control-solid" })
+
+                            <div class="fv-plugins-message-container invalid-feedback"></div>
+                        </div>
+                        <div class="d-flex flex-column mb-5 fv-row fv-plugins-icon-container">
+
+                            <label class="required fs-5 fw-bold mb-2">Product Description</label>
+
+                            @Html.TextAreaFor(model => model.ProductDescription, new { @class = "form-control form-control-solid" })
+
+                            <div class="fv-plugins-message-container invalid-feedback"></div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <div>
+                        <div class="d-flex flex-column mb-5 fv-row fv-plugins-icon-container">
+
+                            <label class="required fs-5 fw-bold mb-2">Products</label>
+
+                            <input type="file" class="form-control form-control-solid" name="product" />
+                            @*@Html.TextBoxFor(model => model.Product, new { @class = "form-control form-control-solid" })*@
+
+
+                            <div class="fv-plugins-message-container invalid-feedback"></div>
+                        </div>
+
+                        <div class="d-flex flex-column mb-5 fv-row fv-plugins-icon-container">
+
+                            <label class="required fs-5 fw-bold mb-2">Item Type Keyword</label>
+
+                            @Html.TextBoxFor(model => model.ItemType, new { @class = "form-control form-control-solid" })
+
+                            <div class="fv-plugins-message-container invalid-feedback"></div>
+                        </div>
+
+                        <div class="d-flex flex-column mb-5 fv-row fv-plugins-icon-container">
+
+                            <label class="required fs-5 fw-bold mb-2">Variation Theme</label>
+
+
+                            @Html.TextBoxFor(model => model.VariationTheme, new { @class = "form-control form-control-solid" })
+
+                            <div class="fv-plugins-message-container invalid-feedback"></div>
+                        </div>
+
+                        <div class="d-flex flex-column mb-5 fv-row fv-plugins-icon-container">
+
+                            <label class="required fs-5 fw-bold mb-2">Key Product Features 2</label>
+
+                            @Html.TextBoxFor(model => model.BulletPoint2, new { @class = "form-control form-control-solid" })
+
+                            <div class="fv-plugins-message-container invalid-feedback"></div>
+                        </div>
+
+                        <div class="d-flex flex-column mb-5 fv-row fv-plugins-icon-container">
+
+                            <label class="required fs-5 fw-bold mb-2">Key Product Features 4</label>
+
+                            @Html.TextBoxFor(model => model.BulletPoint4, new { @class = "form-control form-control-solid" })
+
+                            <div class="fv-plugins-message-container invalid-feedback"></div>
+                        </div>
+                        <div class="d-flex flex-column mb-5 fv-row fv-plugins-icon-container">
+
+                            <label class="required fs-5 fw-bold mb-2">Shape</label>
+
+                            @Html.TextBoxFor(model => model.ItemShape, new { @class = "form-control form-control-solid" })
+
+                            <div class="fv-plugins-message-container invalid-feedback"></div>
+                        </div>
+                        <div class="d-flex flex-column mb-5 fv-row fv-plugins-icon-container">
+
+                            <label class="required fs-5 fw-bold mb-2">Shipping-Template</label>
+
+                            @Html.TextBoxFor(model => model.ShippingTemplate, new { @class = "form-control form-control-solid" })
+
+                            <div class="fv-plugins-message-container invalid-feedback"></div>
+                        </div>
+                        <div class="d-flex flex-column mb-5 fv-row fv-plugins-icon-container">
+
+                            <label class="required fs-5 fw-bold mb-2">Item Width Side to Side 1</label>
+
+                            @Html.TextBoxFor(model => model.ItemWidthSide1, new { @class = "form-control form-control-solid" })
+
+                            <div class="fv-plugins-message-container invalid-feedback"></div>
+                        </div>
+                        <div class="d-flex flex-column mb-5 fv-row fv-plugins-icon-container">
+
+                            <label class="required fs-5 fw-bold mb-2">Item Width Side to Side 2</label>
+
+                            @Html.TextBoxFor(model => model.ItemWidthSide2, new { @class = "form-control form-control-solid" })
+
+                            <div class="fv-plugins-message-container invalid-feedback"></div>
+                        </div>
+                        <div class="d-flex flex-column mb-5 fv-row fv-plugins-icon-container">
+
+                            <label class="required fs-5 fw-bold mb-2">Item Width Side to Side 3</label>
+
+                            @Html.TextBoxFor(model => model.ItemWidthSide3, new { @class = "form-control form-control-solid" })
+
+                            <div class="fv-plugins-message-container invalid-feedback"></div>
+                        </div>
+                        <div class="d-flex flex-column mb-5 fv-row fv-plugins-icon-container">
+
+                            <label class="required fs-5 fw-bold mb-2">Quantity</label>
+                            @Html.DropDownListFor(model => model.Quantity,
+                                new List<SelectListItem> {
+                                    new SelectListItem { Value = "0" , Text = "Open this select quantity" },
+                                    new SelectListItem { Value = "10" , Text = "10" },
+                                    new SelectListItem { Value = "20" , Text = "20" },
+                                    new SelectListItem { Value = "30" , Text = "30" },
+                                    new SelectListItem { Value = "40" , Text = "40" },
+                                    new SelectListItem { Value = "50" , Text = "50" }
+
+
+                                },
+                                new { @class = "form-select form-select-solid" })
+
+                            <div class="fv-plugins-message-container invalid-feedback"></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end::Card body-->
+        <div class="card-footer">
+            <button type="submit" id="kt_modal_new_target_submit" class="btn btn-primary">
+                <span class="indicator-label">Submit</span>
+            </button>
+        </div>
+
+
+    }
+    
+
+</div>
+

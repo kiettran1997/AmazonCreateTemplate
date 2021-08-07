@@ -1,0 +1,13 @@
+C:\ProjectDev\AmazonCreateTemplateFile\AmazonCreateTemplateFile\bin\Debug\AmazonCreateTemplateFile.exe.config
+C:\ProjectDev\AmazonCreateTemplateFile\AmazonCreateTemplateFile\bin\Debug\AmazonCreateTemplateFile.exe
+C:\ProjectDev\AmazonCreateTemplateFile\AmazonCreateTemplateFile\bin\Debug\AmazonCreateTemplateFile.pdb
+C:\ProjectDev\AmazonCreateTemplateFile\AmazonCreateTemplateFile\bin\Debug\EPPlus.Core.Extensions.dll
+C:\ProjectDev\AmazonCreateTemplateFile\AmazonCreateTemplateFile\bin\Debug\EPPlus.dll
+C:\ProjectDev\AmazonCreateTemplateFile\AmazonCreateTemplateFile\bin\Debug\System.ComponentModel.Annotations.dll
+C:\ProjectDev\AmazonCreateTemplateFile\AmazonCreateTemplateFile\bin\Debug\EPPlus.xml
+C:\ProjectDev\AmazonCreateTemplateFile\AmazonCreateTemplateFile\bin\Debug\EPPlus.Core.Extensions.xml
+C:\ProjectDev\AmazonCreateTemplateFile\AmazonCreateTemplateFile\obj\Debug\AmazonCreateTemplateFile.csproj.CoreCompileInputs.cache
+C:\ProjectDev\AmazonCreateTemplateFile\AmazonCreateTemplateFile\obj\Debug\AmazonCreateTemplateFile.csproj.CopyComplete
+C:\ProjectDev\AmazonCreateTemplateFile\AmazonCreateTemplateFile\obj\Debug\AmazonCreateTemplateFile.exe
+C:\ProjectDev\AmazonCreateTemplateFile\AmazonCreateTemplateFile\obj\Debug\AmazonCreateTemplateFile.pdb
+C:\ProjectDev\AmazonCreateTemplateFile\AmazonCreateTemplateFile\obj\Debug\AmazonCreateTemplateFile.csproj.AssemblyReference.cache
