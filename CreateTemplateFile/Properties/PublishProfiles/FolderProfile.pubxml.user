@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <_PublishTargetUrl>C:\ProjectDev\AmazonCreateTemplateFile\CreateTemplateFile\bin\app.publish\</_PublishTargetUrl>
-    <History>True|2021-08-07T04:43:12.3094431Z;True|2021-08-07T11:17:15.4735068+07:00;</History>
+    <History>True|2021-08-11T04:24:09.5349850Z;True|2021-08-07T11:43:12.3094431+07:00;True|2021-08-07T11:17:15.4735068+07:00;</History>
   </PropertyGroup>
   <ItemGroup>
     <File Include="assets/css/style.bundle.css">
@@ -6531,10 +6531,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>09/10/2013 16:29:20</publishTime>
     </File>
     <File Include="bin/CreateTemplateFile.dll">
-      <publishTime>08/07/2021 11:43:02</publishTime>
+      <publishTime>08/11/2021 11:24:02</publishTime>
     </File>
     <File Include="bin/CreateTemplateFile.pdb">
-      <publishTime>08/07/2021 11:43:02</publishTime>
+      <publishTime>08/11/2021 11:24:02</publishTime>
     </File>
     <File Include="bin/EPPlus.Core.Extensions.dll">
       <publishTime>01/06/2020 00:01:14</publishTime>
@@ -6735,7 +6735,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>07/29/2021 11:02:33</publishTime>
     </File>
     <File Include="Views/CreateTemplateAmazon/Index.cshtml">
-      <publishTime>08/05/2021 16:31:24</publishTime>
+      <publishTime>08/10/2021 22:15:04</publishTime>
+    </File>
+    <File Include="Views/CreateTemplateTShirt/Index.cshtml">
+      <publishTime>08/10/2021 23:08:10</publishTime>
     </File>
     <File Include="Views/Home/About.cshtml">
       <publishTime>07/29/2021 11:02:33</publishTime>
@@ -6750,7 +6753,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>07/29/2021 11:02:33</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>08/07/2021 11:39:48</publishTime>
+      <publishTime>08/10/2021 22:56:10</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>07/29/2021 11:02:33</publishTime>

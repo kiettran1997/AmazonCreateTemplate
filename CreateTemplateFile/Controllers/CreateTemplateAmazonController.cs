@@ -681,13 +681,7 @@ namespace CreateTemplateFile.Controllers
             var fA = model.ShippingTemplate;
             var quantity = model.Quantity;
             var inches = "Inches";
-            var itemWidthSide1 = model.ItemWidthSide1;
-            var itemWidthSide2 = model.ItemWidthSide2;
-            var itemWidthSide3 = model.ItemWidthSide3;
-            var ItemLengthHead1 = model.ItemLengthHead1;
-            var ItemLengthHead2 = model.ItemLengthHead2;
-            var ItemLengthHead3 = model.ItemLengthHead3;
-
+           
             #endregion
 
 
@@ -703,11 +697,10 @@ namespace CreateTemplateFile.Controllers
                 for (int i = 2; i <= row; i++)
                 {
                     var variants = new List<Variant>();
-                    for (int j = 1; j <= rowCategory; j++)
+                    for (int j = 2; j <= rowCategory; j++)
                     {
                         variants.Add(new Variant { Sku = GenSkuCode() });
-                        variants.Add(new Variant { Sku = GenSkuCode() });
-                        variants.Add(new Variant { Sku = GenSkuCode() });
+                        
                     }
 
                     
@@ -722,7 +715,7 @@ namespace CreateTemplateFile.Controllers
                         var name = sheetProduct.Cells[i, 1].Value;
                         for (int j = 0; j < images.Count; j++)
                         {
-                            for (int k = 0; k < 4; k++)
+                            for (int k = 0; k <= variants.Count; k++)
                             {
                                 sheetTemplate.Cells[rowBegin + k, 14 + j].Value = images[j];
 
@@ -732,19 +725,16 @@ namespace CreateTemplateFile.Controllers
 
                         // diền  T
                         sheetTemplate.Cells["X" + rowBegin].Value = "Parent";
-                        sheetTemplate.Cells["J" + (rowBegin + 1)].Value = itemWidthSide1;
-                        sheetTemplate.Cells["J" + (rowBegin + 2)].Value = itemWidthSide2;
-                        sheetTemplate.Cells["J" + (rowBegin + 3)].Value = itemWidthSide3;
-                        sheetTemplate.Cells["L" + (rowBegin + 1)].Value = ItemLengthHead1;
-                        sheetTemplate.Cells["L" + (rowBegin + 2)].Value = ItemLengthHead2;
-                        sheetTemplate.Cells["L" + (rowBegin + 3)].Value = ItemLengthHead3;
+                        
 
                         foreach (var item in variants)
                         {
                             var id = item.Sku + ThreadSafeRandom.ThisThreadsRandom.Next(10000, 99999);
-
+                            sheetTemplate.Cells["B" + rowBegin].Value = id;
+                            sheetTemplate.Cells["D" + rowBegin].Value = name;
+                            sheetTemplate.Cells["Z" + rowBegin].Value = "Variation";
                             //lấy sku 
-                            for (int j = 1; j < 4; j++)
+                            for (int j = 1; j <= variants.Count; j++)
                             {
                                 sheetTemplate.Cells["B" + (rowBegin + j)].Value =
                                     item.Sku + ThreadSafeRandom.ThisThreadsRandom.Next(10000, 99999); 
@@ -761,16 +751,14 @@ namespace CreateTemplateFile.Controllers
 
 
                             }
-                            sheetTemplate.Cells["B" + rowBegin].Value = id;
-                            sheetTemplate.Cells["D" + rowBegin].Value = name;
-                            sheetTemplate.Cells["Z" + rowBegin].Value = "Variation";
                             
+                        
 
                         }
 
                     }
                     // fill du lieu dien tay
-                    for (int j = 0; j < 4; j++)
+                    for (int j = 0; j <= variants.Count; j++)
                     {
                         sheetTemplate.Cells["A" + (rowBegin + j)].Value = a;
                         sheetTemplate.Cells["C" + (rowBegin + j)].Value = generic;
@@ -801,20 +789,21 @@ namespace CreateTemplateFile.Controllers
                         // lay BT
                         var itemDisplayLength = sheetMap.Cells[j, 3].Value;
                         sheetTemplate.Cells["BT" + (rowBegin + 1)].Value = itemDisplayLength;
-
+                        sheetTemplate.Cells["J" + (rowBegin + 1)].Value = itemDisplayLength;
                         // lay BU
                         var itemDisplayWidth = sheetMap.Cells[j, 4].Value;
                         sheetTemplate.Cells["BU" + (rowBegin + 1)].Value = itemDisplayWidth;
+                        sheetTemplate.Cells["L" + (rowBegin + 1)].Value = itemDisplayWidth;
+
                         rowBegin++;
+
 
                     }
 
-
-                    rowBegin -= 8;
+                    rowBegin += 1;
                 }
             }
 
-            //excelTemplate.SaveAs(new FileInfo("test.xlsms"));
 
             return File(excelTemplate.GetAsByteArray(), "application/vnd.ms-excel", "amz.xlsx");
         }

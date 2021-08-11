@@ -7,13 +7,13 @@
 
 <div class="card">
 
-    @using (Html.BeginForm("Index", "CreateTemplateAmazon", FormMethod.Post, new  
-    {  
-        enctype = "multipart/form-data"  
+    @using (Html.BeginForm("Index", "CreateTemplateAmazon", FormMethod.Post, new
+    {
+        enctype = "multipart/form-data"
     }))
     {
         <div class="card-header">
-            <p class="card-title">Create Template Amazon</p>
+            <p class="card-title">Create Template Blanket</p>
         </div>
         <!--begin::Card body-->
         <div class="card-body">
@@ -84,36 +84,13 @@
                         </div>
                         @*<div class="d-flex flex-column mb-5 fv-row fv-plugins-icon-container">
 
-                            <label class="required fs-5 fw-bold mb-2">Your Price USD (US)</label>
+                                <label class="required fs-5 fw-bold mb-2">Your Price USD (US)</label>
 
-                            @Html.TextBoxFor(model => model.PurchasableOffer, new { @class = "form-control form-control-solid" })
+                                @Html.TextBoxFor(model => model.PurchasableOffer, new { @class = "form-control form-control-solid" })
 
-                            <div class="fv-plugins-message-container invalid-feedback"></div>
-                        </div>*@
-                        <div class="d-flex flex-column mb-5 fv-row fv-plugins-icon-container">
+                                <div class="fv-plugins-message-container invalid-feedback"></div>
+                            </div>*@
 
-                            <label class="required fs-5 fw-bold mb-2">Item Length Head to Toe 1</label>
-
-                            @Html.TextBoxFor(model => model.ItemLengthHead1, new { @class = "form-control form-control-solid" })
-
-                            <div class="fv-plugins-message-container invalid-feedback"></div>
-                        </div>
-                        <div class="d-flex flex-column mb-5 fv-row fv-plugins-icon-container">
-
-                            <label class="required fs-5 fw-bold mb-2">Item Length Head to Toe 2</label>
-
-                            @Html.TextBoxFor(model => model.ItemLengthHead2, new { @class = "form-control form-control-solid" })
-
-                            <div class="fv-plugins-message-container invalid-feedback"></div>
-                        </div>
-                        <div class="d-flex flex-column mb-5 fv-row fv-plugins-icon-container">
-
-                            <label class="required fs-5 fw-bold mb-2">Item Length Head to Toe 3</label>
-
-                            @Html.TextBoxFor(model => model.ItemLengthHead3, new { @class = "form-control form-control-solid" })
-
-                            <div class="fv-plugins-message-container invalid-feedback"></div>
-                        </div>
                         <div class="d-flex flex-column mb-5 fv-row fv-plugins-icon-container">
 
                             <label class="required fs-5 fw-bold mb-2">Product Description</label>
@@ -191,30 +168,7 @@
 
                             <div class="fv-plugins-message-container invalid-feedback"></div>
                         </div>
-                        <div class="d-flex flex-column mb-5 fv-row fv-plugins-icon-container">
 
-                            <label class="required fs-5 fw-bold mb-2">Item Width Side to Side 1</label>
-
-                            @Html.TextBoxFor(model => model.ItemWidthSide1, new { @class = "form-control form-control-solid" })
-
-                            <div class="fv-plugins-message-container invalid-feedback"></div>
-                        </div>
-                        <div class="d-flex flex-column mb-5 fv-row fv-plugins-icon-container">
-
-                            <label class="required fs-5 fw-bold mb-2">Item Width Side to Side 2</label>
-
-                            @Html.TextBoxFor(model => model.ItemWidthSide2, new { @class = "form-control form-control-solid" })
-
-                            <div class="fv-plugins-message-container invalid-feedback"></div>
-                        </div>
-                        <div class="d-flex flex-column mb-5 fv-row fv-plugins-icon-container">
-
-                            <label class="required fs-5 fw-bold mb-2">Item Width Side to Side 3</label>
-
-                            @Html.TextBoxFor(model => model.ItemWidthSide3, new { @class = "form-control form-control-solid" })
-
-                            <div class="fv-plugins-message-container invalid-feedback"></div>
-                        </div>
                         <div class="d-flex flex-column mb-5 fv-row fv-plugins-icon-container">
 
                             <label class="required fs-5 fw-bold mb-2">Quantity</label>
@@ -243,11 +197,14 @@
             <button type="submit" id="kt_modal_new_target_submit" class="btn btn-primary">
                 <span class="indicator-label">Submit</span>
             </button>
+
+            <a href="@Url.Action("Index", null, new { area = string.Empty, controller = "CreateTemplateAmazon" }, Request.Url.Scheme)" class="btn btn-primary">Refresh page</a>
+
         </div>
 
 
     }
-    
+
 
 </div>
 
