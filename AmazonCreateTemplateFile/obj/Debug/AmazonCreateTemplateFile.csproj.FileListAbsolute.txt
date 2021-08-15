@@ -11,16 +11,3 @@ C:\ProjectDev\AmazonCreateTemplateFile\AmazonCreateTemplateFile\obj\Debug\Amazon
 C:\ProjectDev\AmazonCreateTemplateFile\AmazonCreateTemplateFile\obj\Debug\AmazonCreateTemplateFile.exe
 C:\ProjectDev\AmazonCreateTemplateFile\AmazonCreateTemplateFile\obj\Debug\AmazonCreateTemplateFile.pdb
 C:\ProjectDev\AmazonCreateTemplateFile\AmazonCreateTemplateFile\obj\Debug\AmazonCreateTemplateFile.csproj.AssemblyReference.cache
-C:\ProjectDev\AmazonCreateTemplate\AmazonCreateTemplateFile\bin\Debug\AmazonCreateTemplateFile.exe.config
-C:\ProjectDev\AmazonCreateTemplate\AmazonCreateTemplateFile\bin\Debug\AmazonCreateTemplateFile.exe
-C:\ProjectDev\AmazonCreateTemplate\AmazonCreateTemplateFile\bin\Debug\AmazonCreateTemplateFile.pdb
-C:\ProjectDev\AmazonCreateTemplate\AmazonCreateTemplateFile\bin\Debug\EPPlus.Core.Extensions.dll
-C:\ProjectDev\AmazonCreateTemplate\AmazonCreateTemplateFile\bin\Debug\EPPlus.dll
-C:\ProjectDev\AmazonCreateTemplate\AmazonCreateTemplateFile\bin\Debug\System.ComponentModel.Annotations.dll
-C:\ProjectDev\AmazonCreateTemplate\AmazonCreateTemplateFile\bin\Debug\EPPlus.xml
-C:\ProjectDev\AmazonCreateTemplate\AmazonCreateTemplateFile\bin\Debug\EPPlus.Core.Extensions.xml
-C:\ProjectDev\AmazonCreateTemplate\AmazonCreateTemplateFile\obj\Debug\AmazonCreateTemplateFile.csproj.AssemblyReference.cache
-C:\ProjectDev\AmazonCreateTemplate\AmazonCreateTemplateFile\obj\Debug\AmazonCreateTemplateFile.csproj.CoreCompileInputs.cache
-C:\ProjectDev\AmazonCreateTemplate\AmazonCreateTemplateFile\obj\Debug\AmazonCreateTemplateFile.csproj.CopyComplete
-C:\ProjectDev\AmazonCreateTemplate\AmazonCreateTemplateFile\obj\Debug\AmazonCreateTemplateFile.exe
-C:\ProjectDev\AmazonCreateTemplate\AmazonCreateTemplateFile\obj\Debug\AmazonCreateTemplateFile.pdb

@@ -664,11 +664,9 @@ namespace CreateTemplateFile.Controllers
 
             #region dữ liệm điền tay
 
-            var a = model.FeedProduct;
+            
             var generic = "Generic";
             var aC = "Manufacture on Demand"; 
-            var h = model.ItemType;
-            var aa = model.VariationTheme;
             var aD = model.ProductDescription;
             var aJ = model.BulletPoint1;
             var aI = model.BulletPoint2;
@@ -677,7 +675,6 @@ namespace CreateTemplateFile.Controllers
             var aM = model.BulletPoint5;
             var aN = model.GenericKeywords;
             var displayLength = "IN";
-            var itemShape = model.ItemShape;
             var fA = model.ShippingTemplate;
             var quantity = model.Quantity;
             var inches = "Inches";
@@ -745,7 +742,7 @@ namespace CreateTemplateFile.Controllers
                                 sheetTemplate.Cells["M" + (rowBegin + j)].Value = quantity;
                                 sheetTemplate.Cells["BQ" + (rowBegin + j)].Value = displayLength;
                                 sheetTemplate.Cells["BR" + (rowBegin + j)].Value = displayLength;
-                                sheetTemplate.Cells["BP" + (rowBegin + j)].Value = itemShape;
+                                sheetTemplate.Cells["BP" + (rowBegin + j)].Value = "Rectangle";
                                 sheetTemplate.Cells["I" + (rowBegin + j)].Value = inches;
                                 sheetTemplate.Cells["K" + (rowBegin + j)].Value = inches;
 
@@ -760,11 +757,11 @@ namespace CreateTemplateFile.Controllers
                     // fill du lieu dien tay
                     for (int j = 0; j <= variants.Count; j++)
                     {
-                        sheetTemplate.Cells["A" + (rowBegin + j)].Value = a;
+                        sheetTemplate.Cells["A" + (rowBegin + j)].Value = "blanket";
                         sheetTemplate.Cells["C" + (rowBegin + j)].Value = generic;
                         sheetTemplate.Cells["E" + (rowBegin + j)].Value = generic;
-                        sheetTemplate.Cells["H" + (rowBegin + j)].Value = h;
-                        sheetTemplate.Cells["AA" + (rowBegin + j)].Value = aa;
+                        sheetTemplate.Cells["H" + (rowBegin + j)].Value = "throw-blankets";
+                        sheetTemplate.Cells["AA" + (rowBegin + j)].Value = "Size ";
                         sheetTemplate.Cells["AC" + (rowBegin + j)].Value = aC;
                         sheetTemplate.Cells["AD" + (rowBegin + j)].Value = aD;
                         sheetTemplate.Cells["AI" + (rowBegin + j)].Value = aI;
@@ -789,11 +786,11 @@ namespace CreateTemplateFile.Controllers
                         // lay BT
                         var itemDisplayLength = sheetMap.Cells[j, 3].Value;
                         sheetTemplate.Cells["BT" + (rowBegin + 1)].Value = itemDisplayLength;
-                        sheetTemplate.Cells["J" + (rowBegin + 1)].Value = itemDisplayLength;
+                        sheetTemplate.Cells["L" + (rowBegin + 1)].Value = itemDisplayLength;
                         // lay BU
                         var itemDisplayWidth = sheetMap.Cells[j, 4].Value;
                         sheetTemplate.Cells["BU" + (rowBegin + 1)].Value = itemDisplayWidth;
-                        sheetTemplate.Cells["L" + (rowBegin + 1)].Value = itemDisplayWidth;
+                        sheetTemplate.Cells["J" + (rowBegin + 1)].Value = itemDisplayWidth;
 
                         rowBegin++;
 

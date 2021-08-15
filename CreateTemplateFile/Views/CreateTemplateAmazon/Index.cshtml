@@ -25,29 +25,11 @@
                             <label class="required fs-5 fw-bold mb-2">Categories</label>
 
                             <input type="file" class="form-control form-control-solid" name="category" />
-                            @*@Html.TextBoxFor(model => model.Categori, new { @class = "form-control form-control-solid" })*@
 
                             <div class="fv-plugins-message-container invalid-feedback"></div>
                         </div>
 
-                        <div class="d-flex flex-column mb-5 fv-row fv-plugins-icon-container">
-
-                            <label class="required fs-5 fw-bold mb-2">Feed product type</label>
-
-                            @Html.TextBoxFor(model => model.FeedProduct, new { @class = "form-control form-control-solid" })
-
-                            <div class="fv-plugins-message-container invalid-feedback"></div>
-                        </div>
-
-                        <div class="d-flex flex-column mb-5 fv-row fv-plugins-icon-container">
-
-                            <label class="required fs-5 fw-bold mb-2">Relationship Type</label>
-
-
-                            @Html.TextBoxFor(model => model.RelationshipType, new { @class = "form-control form-control-solid" })
-
-                            <div class="fv-plugins-message-container invalid-feedback"></div>
-                        </div>
+                       
 
                         <div class="d-flex flex-column mb-5 fv-row fv-plugins-icon-container">
 
@@ -82,14 +64,7 @@
 
                             <div class="fv-plugins-message-container invalid-feedback"></div>
                         </div>
-                        @*<div class="d-flex flex-column mb-5 fv-row fv-plugins-icon-container">
-
-                                <label class="required fs-5 fw-bold mb-2">Your Price USD (US)</label>
-
-                                @Html.TextBoxFor(model => model.PurchasableOffer, new { @class = "form-control form-control-solid" })
-
-                                <div class="fv-plugins-message-container invalid-feedback"></div>
-                            </div>*@
+                       
 
                         <div class="d-flex flex-column mb-5 fv-row fv-plugins-icon-container">
 
@@ -110,30 +85,10 @@
                             <label class="required fs-5 fw-bold mb-2">Products</label>
 
                             <input type="file" class="form-control form-control-solid" name="product" />
-                            @*@Html.TextBoxFor(model => model.Product, new { @class = "form-control form-control-solid" })*@
-
 
                             <div class="fv-plugins-message-container invalid-feedback"></div>
                         </div>
 
-                        <div class="d-flex flex-column mb-5 fv-row fv-plugins-icon-container">
-
-                            <label class="required fs-5 fw-bold mb-2">Item Type Keyword</label>
-
-                            @Html.TextBoxFor(model => model.ItemType, new { @class = "form-control form-control-solid" })
-
-                            <div class="fv-plugins-message-container invalid-feedback"></div>
-                        </div>
-
-                        <div class="d-flex flex-column mb-5 fv-row fv-plugins-icon-container">
-
-                            <label class="required fs-5 fw-bold mb-2">Variation Theme</label>
-
-
-                            @Html.TextBoxFor(model => model.VariationTheme, new { @class = "form-control form-control-solid" })
-
-                            <div class="fv-plugins-message-container invalid-feedback"></div>
-                        </div>
 
                         <div class="d-flex flex-column mb-5 fv-row fv-plugins-icon-container">
 
@@ -152,14 +107,7 @@
 
                             <div class="fv-plugins-message-container invalid-feedback"></div>
                         </div>
-                        <div class="d-flex flex-column mb-5 fv-row fv-plugins-icon-container">
-
-                            <label class="required fs-5 fw-bold mb-2">Shape</label>
-
-                            @Html.TextBoxFor(model => model.ItemShape, new { @class = "form-control form-control-solid" })
-
-                            <div class="fv-plugins-message-container invalid-feedback"></div>
-                        </div>
+                        
                         <div class="d-flex flex-column mb-5 fv-row fv-plugins-icon-container">
 
                             <label class="required fs-5 fw-bold mb-2">Shipping-Template</label>
@@ -172,18 +120,8 @@
                         <div class="d-flex flex-column mb-5 fv-row fv-plugins-icon-container">
 
                             <label class="required fs-5 fw-bold mb-2">Quantity</label>
-                            @Html.DropDownListFor(model => model.Quantity,
-                                new List<SelectListItem> {
-                                    new SelectListItem { Value = "0" , Text = "Open this select quantity" },
-                                    new SelectListItem { Value = "10" , Text = "10" },
-                                    new SelectListItem { Value = "20" , Text = "20" },
-                                    new SelectListItem { Value = "30" , Text = "30" },
-                                    new SelectListItem { Value = "40" , Text = "40" },
-                                    new SelectListItem { Value = "50" , Text = "50" }
 
-
-                                },
-                                new { @class = "form-select form-select-solid" })
+                            @Html.TextBoxFor(model => model.Quantity, new { @class = "form-control form-control-solid" })
 
                             <div class="fv-plugins-message-container invalid-feedback"></div>
                         </div>

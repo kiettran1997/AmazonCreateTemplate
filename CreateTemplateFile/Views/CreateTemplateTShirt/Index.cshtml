@@ -3,6 +3,155 @@
     ViewBag.Title = "Create template Amazon";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@model CreateTemplateFile.Models.InputData
 
-<h2>Index</h2>
+
+<div class="card">
+
+
+    @using (Html.BeginForm("Index", "CreateTemplateTShirt", FormMethod.Post, new
+    {
+        enctype = "multipart/form-data"
+    }))
+    {
+        <div class="card-header">
+            <p class="card-title">Create Template T-Shirt</p>
+        </div>
+        <!--begin::Card body-->
+        <div class="card-body">
+            <div class="row">
+                <div class="col-6">
+                    <div>
+                        <div class="d-flex flex-column mb-5 fv-row fv-plugins-icon-container">
+
+                            <label class="required fs-5 fw-bold mb-2">Categories</label>
+
+                            <input type="file" class="form-control form-control-solid" name="category" />
+
+                            <div class="fv-plugins-message-container invalid-feedback"></div>
+                        </div>
+
+
+
+                        <div class="d-flex flex-column mb-5 fv-row fv-plugins-icon-container">
+
+                            <label class="required fs-5 fw-bold mb-2">Key Product Features 1</label>
+
+                            @Html.TextBoxFor(model => model.BulletPoint1, new { @class = "form-control form-control-solid" })
+
+                            <div class="fv-plugins-message-container invalid-feedback"></div>
+                        </div>
+
+                        <div class="d-flex flex-column mb-5 fv-row fv-plugins-icon-container">
+
+                            <label class="required fs-5 fw-bold mb-2">Key Product Features 3</label>
+
+                            @Html.TextBoxFor(model => model.BulletPoint3, new { @class = "form-control form-control-solid" })
+
+                            <div class="fv-plugins-message-container invalid-feedback"></div>
+                        </div>
+                        <div class="d-flex flex-column mb-5 fv-row fv-plugins-icon-container">
+
+                            <label class="required fs-5 fw-bold mb-2">Key Product Features 5</label>
+
+                            @Html.TextBoxFor(model => model.BulletPoint5, new { @class = "form-control form-control-solid" })
+
+                            <div class="fv-plugins-message-container invalid-feedback"></div>
+                        </div>
+                        <div class="d-flex flex-column mb-5 fv-row fv-plugins-icon-container">
+
+                            <label class="required fs-5 fw-bold mb-2">Search Terms</label>
+
+                            @Html.TextBoxFor(model => model.GenericKeywords, new { @class = "form-control form-control-solid" })
+
+                            <div class="fv-plugins-message-container invalid-feedback"></div>
+                        </div>
+
+
+                        <div class="d-flex flex-column mb-5 fv-row fv-plugins-icon-container">
+
+                            <label class="required fs-5 fw-bold mb-2">Product Description</label>
+
+                            @Html.TextAreaFor(model => model.ProductDescription, new { @class = "form-control form-control-solid" })
+
+                            <div class="fv-plugins-message-container invalid-feedback"></div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <div>
+                        <div class="d-flex flex-column mb-5 fv-row fv-plugins-icon-container">
+
+                            <label class="required fs-5 fw-bold mb-2">Products</label>
+
+                            <input type="file" class="form-control form-control-solid" name="product" />
+
+                            <div class="fv-plugins-message-container invalid-feedback"></div>
+                        </div>
+
+
+                        <div class="d-flex flex-column mb-5 fv-row fv-plugins-icon-container">
+
+                            <label class="required fs-5 fw-bold mb-2">Key Product Features 2</label>
+
+                            @Html.TextBoxFor(model => model.BulletPoint2, new { @class = "form-control form-control-solid" })
+
+                            <div class="fv-plugins-message-container invalid-feedback"></div>
+                        </div>
+
+                        <div class="d-flex flex-column mb-5 fv-row fv-plugins-icon-container">
+
+                            <label class="required fs-5 fw-bold mb-2">Key Product Features 4</label>
+
+                            @Html.TextBoxFor(model => model.BulletPoint4, new { @class = "form-control form-control-solid" })
+
+                            <div class="fv-plugins-message-container invalid-feedback"></div>
+                        </div>
+
+                        <div class="d-flex flex-column mb-5 fv-row fv-plugins-icon-container">
+
+                            <label class="required fs-5 fw-bold mb-2">Quantity</label>
+
+                            @Html.TextBoxFor(model => model.Quantity, new { @class = "form-control form-control-solid" })
+
+                            <div class="fv-plugins-message-container invalid-feedback"></div>
+                        </div>
+
+                        <div class="d-flex flex-column mb-5 fv-row fv-plugins-icon-container">
+
+                            <label class="required fs-5 fw-bold mb-2">Shipping-Template</label>
+
+                            @Html.DropDownListFor(model => model.Quantity,
+                               new List<SelectListItem> {
+                                   new SelectListItem { Value = "Migrated Template" , Text = "Open this select Shipping-Template" },
+                                   new SelectListItem { Value = "DS Blanket" , Text = "DS Blanket" },
+                                   new SelectListItem { Value = "DS Tshirt" , Text = "DS Tshirt" },
+
+                               },
+                               new { @class = "form-select form-select-solid" })
+
+                            <div class="fv-plugins-message-container invalid-feedback"></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end::Card body-->
+        <div class="card-footer">
+            <button type="submit" id="kt_modal_new_target_submit" class="btn btn-primary">
+                <span class="indicator-label">Submit</span>
+            </button>
+
+            <a href="@Url.Action("Index", null, new { area = string.Empty, controller = "CreateTemplateTShirt" }, Request.Url.Scheme)" class="btn btn-primary">Refresh page</a>
+
+        </div>
+
+
+    }
+
+
+</div>
 
