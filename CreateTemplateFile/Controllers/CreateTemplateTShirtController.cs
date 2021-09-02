@@ -712,7 +712,10 @@ namespace CreateTemplateFile.Controllers
             excelProduct.Load(product.InputStream);
             var sheetProduct = excelProduct.Workbook.Worksheets.FirstOrDefault();
             if (sheetProduct != null)
-            {
+            {  
+
+                var countColumn = sheetProduct.Dimension.Columns;
+
                 var row = sheetProduct.Dimension.Rows;
                 var rowCategory = sheetMap.Dimension.Rows;
                 var rowBegin = 4;
@@ -728,53 +731,37 @@ namespace CreateTemplateFile.Controllers
 
 
                     // fill anh
-                    var images = sheetProduct.Cells[i, 2]?.Value?.ToString().Split('|').ToList();
+                   
 
-                    if (images != null)
+                    var name = sheetProduct.Cells[i, 1].Value;
+
+                    sheetTemplate.Cells["AX" + rowBegin].Value = "Parent";
+                    foreach (var item in variants)
                     {
-                        if (images.Count > 9)
-                            images = images.Take(9).ToList();
-
-                        var name = sheetProduct.Cells[i, 1].Value;
-                        for (int j = 0; j < images.Count; j++)
+                        var id = item.Sku + ThreadSafeRandom.ThisThreadsRandom.Next(10000, 99999);
+                        sheetTemplate.Cells["B" + rowBegin].Value = id;
+                        sheetTemplate.Cells["D" + rowBegin].Value = name;
+                        //lấy sku 
+                        for (int j = 1; j <= variants.Count; j++)
                         {
-                            for (int k = 0; k <= variants.Count; k++)
-                            {
-                                sheetTemplate.Cells[rowBegin + k, 14 + j].Value = images[j];
-
-                            }
-
-                        }
-
-                        sheetTemplate.Cells["AX" + rowBegin].Value = "Parent";
-                        foreach (var item in variants)
-                        {
-                            var id = item.Sku + ThreadSafeRandom.ThisThreadsRandom.Next(10000, 99999);
-                            sheetTemplate.Cells["B" + rowBegin].Value = id;
-                            sheetTemplate.Cells["D" + rowBegin].Value = name;
-                            //lấy sku 
-                            for (int j = 1; j <= variants.Count; j++)
-                            {
-                                sheetTemplate.Cells["B" + (rowBegin + j)].Value =
-                                    item.Sku + ThreadSafeRandom.ThisThreadsRandom.Next(10000, 99999);
-                                sheetTemplate.Cells["AY" + (rowBegin + j)].Value = id;
-                                sheetTemplate.Cells["D" + (rowBegin + j)].Value = name;
-                                sheetTemplate.Cells["AD" + (rowBegin + j)].Value = "US";
-                                sheetTemplate.Cells["AE" + (rowBegin + j)].Value = "Alpha";
-                                sheetTemplate.Cells["AL" + (rowBegin + j)].Value = "Regular";
-                                sheetTemplate.Cells["AM" + (rowBegin + j)].Value = "Regular";
-                                sheetTemplate.Cells["AX" + (rowBegin + j)].Value = "Child";
-                                sheetTemplate.Cells["AZ" + (rowBegin + j)].Value = "Variation";
+                            sheetTemplate.Cells["B" + (rowBegin + j)].Value =
+                                item.Sku + ThreadSafeRandom.ThisThreadsRandom.Next(10000, 99999);
+                            sheetTemplate.Cells["AY" + (rowBegin + j)].Value = id;
+                            sheetTemplate.Cells["D" + (rowBegin + j)].Value = name;
+                            sheetTemplate.Cells["AD" + (rowBegin + j)].Value = "US";
+                            sheetTemplate.Cells["AE" + (rowBegin + j)].Value = "Alpha";
+                            sheetTemplate.Cells["AL" + (rowBegin + j)].Value = "Regular";
+                            sheetTemplate.Cells["AM" + (rowBegin + j)].Value = "Regular";
+                            sheetTemplate.Cells["AX" + (rowBegin + j)].Value = "Child";
+                            sheetTemplate.Cells["AZ" + (rowBegin + j)].Value = "Variation";
 
 
-
-
-
-                            }
 
 
 
                         }
+
+
 
                     }
                     // fill du lieu dien tay
@@ -815,7 +802,16 @@ namespace CreateTemplateFile.Controllers
                         sheetTemplate.Cells["AF" + (rowBegin + 1)].Value = size;
 
                         // lay BT
-                        var colorMap = sheetMap.Cells[j, 3].Value;
+                        var colorMap = sheetMap.Cells[j, 3].Value.ToString();
+                        for (int k = 3; k <= countColumn; k++)
+                        {
+                            var images = sheetProduct.Cells[i, k]?.Value?.ToString();
+                            var colorImage = sheetProduct.Cells[1, k]?.Value?.ToString();
+                            if (colorMap.Contains("Black") && colorImage.Contains("Black"))
+                                sheetTemplate.Cells["AN" + (rowBegin + 1)].Value = images;
+
+                        }
+
                         sheetTemplate.Cells["BS" + (rowBegin + 1)].Value = colorMap;
                         // lay BU
                         
